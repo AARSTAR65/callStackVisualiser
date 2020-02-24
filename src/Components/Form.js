@@ -31,7 +31,8 @@ class Form extends Component {
         return (
             <form>
                 <input type="text" className="field" name="item" value={item} onChange={this.handleChange} placeholder="What needs to be done?" required />
-                <input type="button" className="submit" value="Submit" onClick={this.submitForm} />
+                <input type="button" className="submit" value="Push" onClick={this.submitForm} />
+		<textarea rows="35" columns="300" className="code"/>
             </form>
         );
     }

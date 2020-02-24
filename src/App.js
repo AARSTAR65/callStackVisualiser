@@ -11,36 +11,41 @@ class App extends Component {
     this.setState({
       items: items.filter((character, i) => {
         return i !== index
-      }),
+      })
     })
   }
 
   handleSubmit = item => {
-    if(item.item.trim()==='')
-    {
+    if (item.item.trim() === '') {
       alert("Please type something...")
     }
-    else
-    {
-      this.setState({ items: [...this.state.items, item] })
+    else {
+      this.setState({ items: [item,...this.state.items] })
     }
-    
+
   }
 
   render() {
     return (
-      <div className="page">
-        <p className="heading">todos</p>
-        <div>
-          <div className="content">
-            <div className="fieldbox">
-              <Form handleSubmit={this.handleSubmit} />
+      <div>
+        <div className="page1">
+          <p className="heading">callStack</p>
+          <div>
+            <div className="content">
+              <div className="fieldbox">
+                <Form handleSubmit={this.handleSubmit} />
+              </div>
             </div>
-            <div className="todoData">
-              <ul>
-                <List characterData={this.state.items} removeCharacter={this.removeCharacter} />
-              </ul>
-            </div>
+          </div>
+        </div>
+        <div className="page2">
+          <div className="todoData">
+            <ul className="stack">
+              <List characterData={this.state.items} removeCharacter={this.removeCharacter} />
+            </ul>
+          </div>
+          <div className="panel">
+          <button className="panelbt">callStack</button>
           </div>
         </div>
       </div>

@@ -25,7 +25,7 @@ class ListData extends Component {
                         <span className="text">{row.item}</span>
                         <span className="checkmark"></span>
                     </label>
-                    <button className="delete" onClick={() => removeCharacter(index)}>Delete</button>
+                    <button className="delete" onClick={() => removeCharacter(index)}>Pop</button>
                 </li>
             )
         })

@@ -1,28 +1,43 @@
-.page {
+.page1 {
     background-color: rgb(0, 0, 255);
-    min-height: 270px;
-    width: 99.8%;
-    height: 35%;
+    min-height: 280px;
+    width: 49.8%;
+    position: fixed;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    float: left;
 }
+
+.page2 {
+    background-color: rgb(250, 250, 255);
+    min-height: 661px;
+    width: 49.5%;
+    border-left: solid rgb(150, 150, 150) 2px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: right;
+}
+
 .heading {
     color: rgb(255, 255, 255);
     font-family: 'FreeSans';
     font-size: 100px;
     position: absolute;
-    left: 42%;
+    left: 10px;
+    top: 10px;
 }
 
 .content {
     background-color: rgba(255, 255, 255, 0.0);
     width: 480px;
     height: 60px;
-    position: absolute;
+    position: fixed;
     border-radius: 30px;
-    left: 35%;
+    left: 10px;
     top: 33%;
 }
 
@@ -34,7 +49,7 @@
 }
 
 .fieldbox {
-    width: 480px;
+    width: 600px;
     height: 60px;
     background-color: rgba(255, 255, 255, 0.0);
     border-radius: 30px;
@@ -44,7 +59,7 @@
 
 .field {
     font-size: 20px;
-    width: 396px;
+    width: 510px;
     height: 60px;
     padding-left: 20px;
     border-radius: 30px;
@@ -73,7 +88,7 @@
     width: 62px;
     height: 62px;
     border-radius: 31px;
-    top: 0.8px;
+    top: 0.5px;
     color: rgb(225, 225, 225);
     background-color: rgb(150, 150, 255);
     float: left;
@@ -82,27 +97,26 @@
 }
 
 .row {
+    float: bottom;
     background-color: rgb(255, 255, 255);
     width: 480px;
     height: 60px;
     font-size: 40px;
     color: rgb(200, 200, 200);
     margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 30px;
     list-style-type: none;
     font-family: 'FreeSans';
     box-shadow: 10px 10px 20px 0 rgb(100, 100, 100);
-    position: relative;
-    left: -115px;
 }
+
 .todoData {
     background-color: rgba(255, 255, 255, 0.0);
     width: 480px;
-    left: 33%;
-    top: 33%;
-    float: top;
-    border-radius: 30px;
+    padding-bottom: 80px;
 }
+
 .delete {
     display: block;
     border: none;
@@ -128,17 +142,17 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
-  
-  .container2 input {
+}
+
+.container2 input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0px;
     width: 0px;
-  }
-  
-  .checkmark {
+}
+
+.checkmark {
     position: absolute;
     top: 0;
     left: 15px;
@@ -147,27 +161,27 @@
     background-color: rgb(255, 255, 255);
     border: solid 1px rgb(150, 150, 150);
     border-radius: 50%;
-  }
-  
-  .container2:hover input ~ .checkmark {
+}
+
+.container2:hover input~.checkmark {
     background-color: rgb(240, 240, 255);
-  }
-  
-  .container2 input:checked ~ .checkmark {
+}
+
+.container2 input:checked~.checkmark {
     background-color: rgb(250, 250, 255);
-  }
-  
-  .checkmark:after {
+}
+
+.checkmark:after {
     content: "";
     position: absolute;
     display: none;
-  }
-  
-  .container2 input:checked ~ .checkmark:after {
+}
+
+.container2 input:checked~.checkmark:after {
     display: block;
-  }
-  
-  .container2 .checkmark:after {
+}
+
+.container2 .checkmark:after {
     left: 11px;
     top: 5px;
     width: 7px;
@@ -177,16 +191,17 @@
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-  }
+}
 
- .text {
-     color: rgb(100, 100, 100);
-     text-decoration: none;
-     position: relative;
-     left: 15px;
-     top: 2px
- }
- .textc {
+.text {
+    color: rgb(100, 100, 100);
+    text-decoration: none;
+    position: relative;
+    left: 15px;
+    top: 2px
+}
+
+.textc {
     color: rgb(150, 150, 150);
     text-decoration: line-through;
     position: relative;
@@ -200,7 +215,6 @@ li.row:nth-child(even) {
 
 li.row:nth-child(odd) {
     background-color: rgb(230, 230, 255);
-    
 }
 
 button:focus {
@@ -209,4 +223,36 @@ button:focus {
 
 input:focus {
     outline: none;
+}
+
+.panel {
+    display: block;
+    width: 49.5%;
+    bottom: 0;
+    position: fixed;
+}
+
+.panelbt {
+    border: none;
+    color: (255, 255, 255);
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    padding-left: 10px;
+}
+
+button.panelbt:nth-child(odd) {
+    background-color: rgb(255, 0, 0);
+}
+
+button.panelbt:nth-child(even) {
+    background-color: rgb(0, 0, 255);
+}
+
+.stack {
+    float: bottom;
+}
+
+.code {
+    font-size:25px;
 }
